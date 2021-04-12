@@ -30,3 +30,6 @@ Route::get('/cast/{cast_id}','CastController@show');
 Route::get('/cast/{cast_id}/edit','CastController@edit');
 Route::put('/cast/{cast_id}','CastController@update');
 Route::delete('/cast/{cast_id}','CastController@destroy');
+
+
+Route::get('/film/create','FilmController@create');

@@ -8,6 +8,7 @@ class CastController extends Controller
 {
     public function index(){
         $casts=DB::table('cast')->get();
-        return view('cast.index', compact('casts'));
+        
+        return view('cast.index',compact('casts'));
     }
 }

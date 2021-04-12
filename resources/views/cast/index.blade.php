@@ -13,15 +13,21 @@
                     </tr>
                   </thead>
                   <tbody>
-                  @forelse ($casts as $key=>$value)
-                    <tr>
-                      <td>{{$key+1}}</td>
-                      <td>{{$value->nama}}</td>
-                      <td>{{$value->umur}}</td>
-                      <td>{{$value->bio}}</td>
+                 @forelse($casts as  $key=>$cast)
+                 <tr>
+                      <td>{{ $key + 1 }}</td>
+                      <td>{{$cast->nama}}</td>
+                      <td>{{$cast->umur}}</td>
+                      <td>{{$cast->bio}}</td>
                       <td><span class="badge bg-danger">55%</span></td>
-                    </tr>
-                @endforelse
+                  </tr>
+                  @empty
+                  <tr>
+                  <td colspan="4" align="center">nopost</td>
+                  </tr>
+                 @endforelse
+
+                
                    
                 
                   </tbody>
